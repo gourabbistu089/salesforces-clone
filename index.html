@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping</title>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+    </style>
+  </head>
+
+  <body class="font-sans">
+    <div id="main" class=" overflow-hidden relative ">
+     <!-- !Navbar -->
+      <!-- <nav
+        class="fixed top-0 bg-white flex items-center justify-between md:justify-around px-6 py-4 z-[155] left-0 right-0 shadow-md">
+        <div class="flex gap-x-4 items-center">
+          <div id="bbt">
+            <div  class="hidden" id="oo1">
+              <i class="fa-solid fa-x text-3xl text-gray-700 block md:hidden" onclick="onToggleMenu1(this) "></i>
+            </div>
+           <div class="" id="oo2">
+             <i  name="menu" class="ri-align-justify text-3xl text-gray-700 block md:hidden" onclick="onToggleMenu2(this) "></i>
+           </div>
+          </div>
+          <div id="logo"  class="flex">
+            <img
+              src="./Images/salesforce-with-type-logo.svg"
+              width="70px"
+              alt=""
+            />
+          </div>
+          <div class="absolute md:static bg-white md:min-h-fit min-h-[60vh] left-0 top-[85%] w-full flex md:items-center px-5 nav-items">
+          <div class=" texts md:flex-row flex-col flex gap-10 text-[#032d60] font-semibold">
+            <div class="text  hover:text-blue-700 cursor-pointer"><p>Products</p></div>
+            <div class="text  hover:text-blue-700 cursor-pointer"><p>Industry</p></div>
+            <div class="text  hover:text-blue-700 cursor-pointer"><p>Learning</p></div>
+            <div class="text  hover:text-blue-700 cursor-pointer"><p>Customer</p></div>
+            <div class="text  hover:text-blue-700 cursor-pointer"><p>Company</p></div>
+            <div class="text  hover:text-blue-700 cursor-pointer"><p>Supports</p></div>
+            <div class="text  hover:text-blue-700 cursor-pointer more flex items-center gap-1">
+              <p>More</p>
+              <i class="ri-arrow-down-wide-line"></i>
+            </div>
+          </div>
+        </div>
+        </div>
+        
+        <div class="flex items-center justify-around gap-x-5">
+          <div  id="contactDetais"  class=" hidden md:flex flex-col items-center justify-center"  >
+            <a href="#" class="">Contact Us</a>
+            <p>+91 000-000-00</p>
+          </div>
+          <div class="icon rounded-full p-1 hover:bg-lightblue hidden md:block">
+            <i class="ri-search-line"></i>
+          </div>
+          <div class="icon rounded-full p-1 hover:bg-lightblue hidden md:block">
+            <i class="ri-global-line"></i>
+          </div>
+          <div
+            id="login"
+            class="flex items-center gap-2 p-2 hover:bg-lightblue rounded-full" >
+            <i class="ri-user-3-fill"></i>
+            <p>Login</p>
+          </div>
+          <div
+            id="try"
+            class="px-4 py-2 bg-[#2E844A] text-white hover:bg-green-600 cursor-pointer"  >
+            <p class="font-semibold">Try for free</p>
+          </div>
+        </div>
+      </nav> -->
+      <!-- !Navbar -->
+        <nav
+        class="fixed top-0 bg-white flex items-center justify-between lg:justify-evenly px-2 py-4 z-[155] left-0 right-0 shadow-md">
+       <div id="logo"  class="flex">
+          <button class="p-2 lg:hidden" onclick="handleMenu()">
+            <i class="fa-solid fa-bars text-gray-500 text-2xl"></i>
+        </button>
+        <img
+          src="./Images/salesforce-with-type-logo.svg"
+          width="70px"
+          alt=""
+        />
+        </div>
+      <div id="nav-menu" class="lg:flex hidden">
+        <div class="flex gap-12 font-bold items-center">
+          <div class="text  hover:text-blue-700 cursor-pointer"><p>Products</p></div>
+          <div class="text  hover:text-blue-700 cursor-pointer"><p>Industry</p></div>
+          <div class="text  hover:text-blue-700 cursor-pointer"><p>Learning</p></div>
+          <div class="text  hover:text-blue-700 cursor-pointer"><p>Customer</p></div>
+          <div class="text  hover:text-blue-700 cursor-pointer"><p>Company</p></div>
+          <div class="text  hover:text-blue-700 cursor-pointer"><p>Supports</p></div>
+          <div class="text  hover:text-blue-700 cursor-pointer more flex items-center gap-1">
+            <p>More</p>
+            <i class="ri-arrow-down-wide-line"></i>
+          </div>
+        </div>
+       
+      </div>
+
+      <div class="flex items-center justify-evenly gap-3">
+        <div id="contactDetais"  class=" hidden lg:flex flex-col items-center justify-center"  >
+          <a href="#" class="">Contact Us</a>
+          <p>+91 000-000-00</p>
+        </div>
+        <div class="icon rounded-full p-1  hover:bg-blue-300 ">
+          <i class="ri-search-line"></i>
+        </div>
+        <div class="icon rounded-full p-1  hidden lg:block  hover:bg-blue-300 ">
+          <i class="ri-global-line"></i>
+        </div>
+        <div
+          id="login"
+          class="flex items-center gap-2 p-2 hover:bg-lightblue rounded-full" >
+          <i class="ri-user-3-fill"></i>
+          <p class="hidden lg:block">Login</p>
+        </div>
+        <div
+          id="try"
+          class="px-4 py-2 bg-[#2E844A] text-white hover:bg-green-600 cursor-pointer"  >
+          <p class="font-semibold">Try for free</p>
+        </div>
+      </div>
+      <div class="fixed bg-white inset-0 p-3 z-10  hidden " id="nav-dialough">
+          <div id="nav-bar" class="flex justify-between">
+            <div id="logo"  class="flex">
+              <button class="p-2 lg:hidden" onclick="handleMenu()">
+                <i class="fa-solid fa-x  text-gray-500 text-2xl"></i>
+            </button>
+            <img
+              src="./Images/salesforce-with-type-logo.svg"
+              width="70px"
+              alt=""
+            />
+            </div>
+            <div class="flex items-center justify-evenly gap-3">
+              <div class="icon rounded-full p-1  hover:bg-blue-300 ">
+                <i class="ri-search-line"></i>
+              </div>
+              <div class="icon rounded-full p-1  hidden lg:block  hover:bg-blue-300 ">
+                <i class="ri-global-line"></i>
+              </div>
+              <div
+                id="login"
+                class="flex items-center gap-2 p-2 hover:bg-lightblue rounded-full" >
+                <i class="ri-user-3-fill"></i>
+              </div>
+              <div
+                id="try"
+                class="px-4 py-2 bg-[#2E844A] text-white hover:bg-green-600 cursor-pointer"  >
+                <p class="font-semibold">Try for free</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-6 flex flex-col gap-12 font-semibold">
+            <div class="flex flex-col gap-8">
+              <div class="text  hover:text-blue-700 cursor-pointer"><p>Products</p></div>
+              <div class="text  hover:text-blue-700 cursor-pointer"><p>Industry</p></div>
+              <div class="text  hover:text-blue-700 cursor-pointer"><p>Learning</p></div>
+              <div class="text  hover:text-blue-700 cursor-pointer"><p>Customer</p></div>
+              <div class="text  hover:text-blue-700 cursor-pointer"><p>Company</p></div>
+              <div class="text  hover:text-blue-700 cursor-pointer"><p>Supports</p></div>
+              <div class="text  hover:text-blue-700 cursor-pointer more flex items-center gap-1">
+                <p>More</p>
+                <i class="ri-arrow-down-wide-line"></i>
+              </div>
+              <div class="h-1 bg-gray-300"></div>
+
+              <div class="flex flex-col gap-8">
+                <div class="flex items-center gap-4">
+                  <i class="fa-solid fa-user"></i>
+                  <span>Login</span>
+                </div>
+                <div class="flex items-center gap-4">
+                  <i class="fa-solid fa-phone"></i>
+                  <span>Contact</span>
+                </div>
+                <div class="flex items-center gap-4">
+                  <i class="fa-solid fa-globe"></i>
+                  <span>Change Region</span>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
+    
+      </div> 
+  </nav>
+      <!-- !Pager 1 -->
+      <div id="page1 " class="w-full z-30 pt-20">
+        <!-- Strip -->
+        <div
+          id="strip"
+          class="bg-[#032d60] text-white flex flex-col md:flex-row  items-center justify-center gap-x-5 px-6 py-4 mb-12 z-50 gap-y-4">
+          <h4 class=" md:font-bold  font-semibold text-center">
+            JUST ANNOUNCED: See why Gartner® recognised Salesforce as a Leader
+            in Customer Data Platforms.
+          </h4>
+          <a href="" class=" md:font-semibold underline">Read the report </a>
+        </div>
+        <div id="content" class="w-full md:w-4/5  md:max-w-[1280px] flex flex-col items-center justify-evenly mx-auto md:flex-row ">
+          <div id="box1" class="w-full md:w-1/2 flex flex-col justify-around">
+            <div class="headka md:max-w-[500px] mb-8">
+              <h1 class="text-[#032D60] text-[64px] font-semibold md:font-bold leading-[64px]">
+                Try Salesforce Starter Suite for free.
+              </h1>
+            </div>
+          <div class="max-w-[500px] mb-8">
+            <p class="text-gray-800 text-lg leading-relaxed">
+                Unite marketing, sales, and service in a single app. Try
+                Salesforce Starter Suite today. There's nothing to install. No
+                credit card required.
+              </p>
+          </div>
+            <div class="boxes flex md:flex-row flex-col w-[80vw] mx-auto gap-y-5 gap-x-5">
+              <button
+                class="btn1 py-3 px-7 bg-blue-700 text-white hover:bg-blue-900 font-medium"
+              >
+                Start free trial
+              </button>
+              <button
+                class="btn2 py-3 px-7 border border-blue-700 text-blue-700 hover:bg-blue-200 font-medium"
+              >
+                Watch demo
+              </button>
+            </div>
+          </div>
+          <div id="box2" class=" hidden w-1/2 md:flex flex-col items-start relative">
+            <img src="./Images/php-marquee-starter-lg-bg.webp" alt="" class=" relative object-fill -left-[250px] -top-[3px] scale-[2] -z-10" />
+            <video src="./video.mp4" class="absolute  w-[500px] left-[73px] -top-[64px] h-[320px] z-30 rounded-lg" controls></video>
+          </div>
+        </div>
+      
+      </div>
+     <!-- !Page 2 -->
+     <div id="page2" class= "relative lg:bg-[url('./Images/page3back.webp')] bg-cover bg-center  p-24 flex flex-col gap-y-12 ">
+      <div>
+      <div id="heading" class="flex items-center justify-center h-16 mt-16 ">
+        <div class="flex flex-col justify-center items-center">
+            <h2 class="text-4xl text-[#032d60] font-bold">
+                Learn what Salesforce products can do for
+                <h2 class="text-4xl text-[#032d60] font-bold hidden lg:block"> you.</h2>
+        </div>
+      </div>
+      <section id="content" class="w-full md:w-4/5 md:max-w-[1180px] flex flex-col items-center justify-evenly mx-auto gap-x-12 gap-y-8 mt-16 lg:flex-row">
+        <div class="max-w-sm rounded overflow-hidden shadow-lg  bg-white ">
+            <img class="w-full" src="/Images/Cards/card1.webp" alt="Sunset in the mountains">
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">
+                <h2 class="hover:text-blue-800 cursor-pointer">Small Business
+           </h2>
+                </div>
+              <p class="text-gray-700 text-base">
+                Make customers happy faster and build loyalty with Service Cloud.
+              </p>
+            </div>
+            <div class="px-6 pt-4 pb-2 mt-6 mb-6">
+              <a class="inline-blocktext-sm underline font-semibold text-gray-700 mr-2 mb-2 hover:text-blue-800 cursor-pointer">Learn More</a>
+            </div>
+          </div>
+        <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+            <img class="w-full " src="/Images/Cards/card2.webp" alt="Sunset in the mountains">
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">
+                <h2 class="hover:text-blue-800 cursor-pointer">Sales Cloud
+                  
+                   </h2>
+                </div>
+              <p class="text-gray-700 text-base">
+                Close more deals and speed up growth with the #1 CRM.
+              </p>
+            </div>
+            <div class="px-6 pt-4 pb-2 mt-6 mb-6">
+              <a class="inline-blocktext-sm underline font-semibold text-gray-700 mr-2 mb-2 hover:text-blue-800 cursor-pointer">Learn More</a>
+            </div>
+          </div>
+        <div class="max-w-sm rounded overflow-hidden shadow-lg  bg-white">
+            <img class="w-full" src="/Images/Cards/card3.webp" alt="Sunset in the mountains">
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">
+                <h2 class="hover:text-blue-800 cursor-pointer">Service Cloud
+                
+           </h2>
+                </div>
+              <p class="text-gray-700 text-base">
+                Make customers happy faster and build loyalty with Service Cloud.
+              </p>
+            </div>
+            <div class="px-6 pt-4 pb-2 mt-6 mb-6">
+              <a class="inline-blocktext-sm underline font-semibold text-gray-700 mr-2 mb-2 hover:text-blue-800 cursor-pointer">Learn More</a>
+            </div>
+          </div>
+        <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+            <img class="w-full" src="/Images/Cards/card4.webp" alt="Sunset in the mountains">
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">
+                <h2 class="hover:text-blue-800 cursor-pointer">Marketing Cloud
+                   </h2>
+                </div>
+              <p class="text-gray-700 text-base">
+                Build customer relatio nships for life with data-first digital marketing.
+              </p>
+            </div>
+            <div class="px-6 pt-4 pb-2 mt-6 mb-6">
+              <a class="inline-blocktext-sm underline font-semibold text-gray-700 mr-2 mb-2 hover:text-blue-800 cursor-pointer">Learn More</a>
+            </div>
+          </div>
+      </section>
+    </div>
+      <div class="-mt-4 flex justify-center items-cente ">
+        <button
+            class="btn2 py-3 px-10 border font-bold border-blue-700 text-blue-700 rounded-md hover:bg-blue-200  bg-white">
+            View all our products
+        </button>
+      </div>
+     </div>
+    <!-- !Page4 -->
+      <section class="w-full relative mt-16 ">
+        <div class="w-3/5 max-w-[1080px] mx-auto flex flex-col gap-y-14 items-center">
+          <div class="flex flex-col gap-y-6 justify-center items-center ">
+            <h1 class="text-[#032D60] text-[48px] font-semibold leading-[56px] text-center " >We bring companies and customers together</h1>
+            <p class="text-center text-[20px] max-w-[750px]">Salesforce is the world’s most trusted customer relationship management (CRM) platform. We help your marketing, sales, commerce, service and IT teams work as one from anywhere — so you can keep your customers happy everywhere.</p>
+            <div class="boxes flex md:flex-row flex-col w-[80vw] mx-auto gap-y-5 gap-x-7 justify-center items-center md:mt-6 md:w-full">
+              <button
+                class="btn1 py-3 px-9 bg-blue-700 text-white hover:bg-blue-900 font-medium rounded-md"
+              >
+                Start free trial
+              </button>
+              <button
+                class="btn2 py-3 px-9 border border-blue-700 text-blue-700 hover:bg-blue-200 font-medium rounded-md"
+              >
+                Watch demo
+              </button>
+            </div>
+          </div>
+          <div  class=" flex flex-col gap-y-6 justify-center items-center ">
+            <h1 class="text-[#032D60] text-[40px] font-semibold leading-[56px] text-center" >Learn valuable skills for free, with Trailhead.</h1>
+            <p class="text-center text-[20px] max-w-[750px]">Follow guided learning paths and get hands-on to learn Salesforce, digital, and soft skills from anywhere.</p>
+          </div>
+        </div>
+      </section>
+    <!-- !Page5 -->
+  <section class="w-full relative mt-16 flex flex-col justify-evenly items-center gap-y-16">
+  <div  class="flex flex-col lg:flex-row  justify-evenly items-center gap-x-6">
+    <div class="max-w-sm rounded overflow-hidden shadow-xl flex flex-col items-start gap-y-6 justify-evenly">
+      <img class="w-[120px] mx-auto mt-4" src="/Images/Cards/card5.webp" alt="Sunset in the mountains">
+      <button class=" bg-blue-200 rounded-xl px-2 py-2 ml-6">Module</button>
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2 ">
+          <h2 class="hover:text-blue-800 cursor-pointer max-w-[270px]">Salesforce Values: Quick Look</h2>
+          </div>
+        <p class="text-gray-700 text-base">
+          Learn how Salesforce helps your business build stronger relationships with your customers.
+        </p>
+      </div>
+      <div class="px-6 pt-4 pb-2 mt-2 mb-6">
+        <a class="inline-blocktext-sm underline font-semibold text-gray-700 mr-2 mb-2 hover:text-blue-800 cursor-pointer">Learn More</a>
+      </div>
+    </div>
+    <div class="max-w-sm rounded overflow-hidden shadow-xl flex flex-col items-start gap-y-6 justify-evenly">
+      <img class="w-[120px] mx-auto mt-4" src="/Images/Cards/card6.webp" alt="Sunset in the mountains">
+      <button class=" bg-blue-200 rounded-xl px-2 py-2 ml-6">Module</button>
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">
+          <h2 class="hover:text-blue-800 cursor-pointer pb-6">Salesforce CRM </h2>
+          </div>
+        <p class="text-gray-700 text-base">
+          Learn how to use customer relationship management (CRM) software to grow your business.
+        </p>
+      </div>
+      <div class="px-6 pt-4 pb-2 mt-2 mb-6">
+        <a class="inline-blocktext-sm underline font-semibold text-gray-700 mr-2 mb-2 hover:text-blue-800 cursor-pointer">Learn More</a>
+      </div>
+    </div>
+    <div class="max-w-sm rounded overflow-hidden shadow-xl flex flex-col items-start gap-y-6 justify-evenly">
+      <img class="w-[120px] mx-auto mt-4" src="/Images/Cards/card6.webp" alt="Sunset in the mountains">
+      <button class=" bg-blue-200 rounded-xl px-2 py-2 ml-6">Module</button>
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">
+          <h2 class="hover:text-blue-800 cursor-pointer pb-6">Sales Cloud Basics </h2>
+          </div>
+        <p class="text-gray-700 text-base">
+          Grow your business, boost productivity, and make smart decisions with Sales Cloud.
+        </p>
+      </div>
+      <div class="px-6 pt-4 pb-2 mt-2 mb-6">
+        <a class="inline-blocktext-sm underline font-semibold text-gray-700 mr-2 mb-2 hover:text-blue-800 cursor-pointer">Learn More</a>
+      </div>
+   </div>
+</div>
+  <div class="flex justify-center items-center mt-4">
+    <button
+    class="btn2 py-3 px-11 border border-blue-700 text-blue-700 hover:bg-blue-200 font-medium rounded-sm" >
+   Learn For Free
+  </button>
+  </div>
+  </section>
+
+<!-- !Page6 -->
+<section class="mt-[100px] relative">
+  <div class="flex flex-col justify-between items-center gap-y-6 ">
+    <div class="max-w-[1080px] mb-16">
+      <h1 class="text-[#032D60] text-[48px] font-semibold leading-[56px] text-center ">Over 150,000 companies, both big and small, are growing their business with Salesforce.</h1>
+    </div>
+    <div class="flex justify-center items-center mb-12">
+      <button
+      class="btn2 py-3 px-11 border border-blue-700 text-blue-700 hover:bg-blue-200 font-medium rounded-sm" >
+    View All Courses
+    </button>
+    </div>
+    <div class="flex flex-wrap justify-center items-center max-w-[1280px] gap-x-3">
+      <div class="flex justify-center items-center shadow-xl rounded-xl w-[200px] h-[100px]">
+        <img src="./Images/Boxes/box1.webp" alt="">
+      </div>
+      <div class="flex justify-center items-center shadow-xl rounded-xl w-[200px] h-[100px]">
+        <img src="./Images/Boxes/box2.webp" alt="">
+      </div>
+      <div class="flex justify-center items-center shadow-xl rounded-xl w-[200px] h-[100px]">
+        <img src="./Images/Boxes/box3.webp" alt="">
+      </div>
+      <div class="flex justify-center items-center shadow-xl rounded-xl w-[200px] h-[100px]">
+        <img src="./Images/Boxes/box4.webp" alt="">
+      </div>
+      <div class="flex justify-center items-center shadow-xl rounded-xl w-[200px] h-[100px]">
+        <img src="./Images/Boxes/box5.webp" alt="">
+      </div>
+      <div class="flex justify-center items-center shadow-xl rounded-xl w-[200px] h-[100px]">
+        <img src="./Images/Boxes/box6.webp" alt="">
+      </div>
+      <div class="flex justify-center items-center shadow-xl rounded-xl w-[200px] h-[100px]">
+        <img src="./Images/Boxes/box7.webp" alt="">
+      </div>
+      <div class="flex justify-center items-center shadow-xl rounded-xl w-[200px] h-[100px] ">
+        <img src="./Images/Boxes/box8.webp" alt="">
+      </div>
+    </div>
+  </div>
+  <img src="./Images/page6.webp" class="w-full rounded-bl-3xl rounded-br-3xl" alt="">
+</section>
+<!-- !Page7 -->
+<section class="mt-8">
+  <div class="max-w-[1220px] mx-auto rounded-2xl lg:shadow-2xl flex">
+    <div class="flex max-w-[1080px] mx-auto justify-between gap-x-9 flex-col lg:flex-row">
+    <div class="flex flex-col justify-evenly gap-y-6">
+      <div class="mx-auto max-w-[500px]">
+        <h1 class="text-[#032D60] text-[44px] font-bold leading-[44px]">Try Salesforce for free. No credit card required, no software to install.</h1>
+      </div>
+      <div class="boxes flex gap-x-5">
+        <button
+          class="btn1 py-3 px-7 bg-blue-700 text-white hover:bg-blue-900 font-medium"
+        >
+          Start free trial
+        </button>
+        <button
+          class="btn2 py-3 px-7 border border-blue-700 text-blue-700 hover:bg-blue-200 font-medium"
+        >
+          See Pricing
+        </button>
+      </div>
+    </div>
+    <div class="w-[510px] h-[434px] hidden lg:block">
+      <img src="./Images/cat.webp"  class="w-full" alt="">
+    </div>
+  </div>
+  </div>
+</section>
+<!--!Page8 -->
+<section class="mt-[150px]">
+  <div>
+    <h1 class="text-[#032D60] text-[40px] font-semibold leading-[40px] text-center">How can we help grow your business?</h1>
+  </div>
+  <div class="max-w-[1180px] mx-auto flex flex-col md:flex-row justify-evenly items-center mt-16 gap-x-10 ">
+    <div>
+      <img src="./Images/customer/cus1.webp" width="272px" alt="">
+      <div class="px-6 pt-4 pb-2 mt-6 mb-6">
+        <a class="inline-blocktext-sm underline font-semibold text-gray-700 mr-2 mb-2 hover:text-blue-800 cursor-pointer hover:no-underline">Learn More</a>
+      </div>
+    </div>
+    <div>
+      <img src="./Images/customer/cus2.webp" width="272px" alt="">
+      <div class="px-6 pt-4 pb-2 mt-6 mb-6">
+        <a class="inline-blocktext-sm underline font-semibold text-gray-700 mr-2 mb-2 hover:text-blue-800 cursor-pointer hover:no-underline">Close More Deal</a>
+      </div>
+    </div>
+    <div>
+      <img src="./Images/customer/cus3.webp" width="272px" alt="">
+      <div class="px-6 pt-4 pb-2 mt-6 mb-6">
+        <a class="inline-blocktext-sm underline font-semibold text-gray-700 mr-2 mb-2 hover:text-blue-800 cursor-pointer hover:no-underline">Scale Service </a>
+      </div>
+    </div>
+    <div>
+      <img src="./Images/customer/cus4.webp" width="272px" alt="">
+      <div class="px-6 pt-4 pb-2 mt-6 mb-6">
+        <a class="inline-blocktext-sm underline font-semibold text-gray-700 mr-2 mb-2 hover:text-blue-800 cursor-pointer hover:no-underline">Customer relationship</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- !Page9 -->
+<section class="mt-[100px]">
+  <div class="flex flex-col max-w-[1280px] mx-auto">
+    <h1 class="text-[#032D60] text-[40px] font-semibold leading-[40px] text-center max-w-[940px] mx-auto">Our technology helps people create better jobs, lives, companies, and communities.</h1>
+    <div class="flex mt-10 justify-between flex-col md:flex-row items-center">
+      <div class="flex flex-col justify-center items-center">
+        <img src="./Images/page8/c1.webp" width="384px" alt="">
+        <p>Technology given for free or discounted
+      </div>
+      <div>
+        <img src="./Images/page8/c1.webp" width="384px" alt="">
+        <p> Fortune 100 Best Companies to Work For 2023</p>
+      </div>
+      <div>
+        <img src="./Images/page8/c1.webp" width="384px" alt="">
+        <p>Fortune World’s Most Admired Companies 2023</p></p>
+      </div>
+    </div>
+
+    <div class="flex mt-6 gap-x-10 justify-between items-center">
+    </div>
+  </div>
+  <div class="relative">
+    <img src="./Images/page8/bg.webp" alt="">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="absolute z-[500] top-[35px]" ><path fill="#fff" fill-opacity="1" d="M0,160L120,181.3C240,203,480,245,720,240C960,235,1200,181,1320,154.7L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
+
+
+  </div>
+</section>
+
+<!-- !Page10 -->
+<section class="mt-[100px]">
+  <div class=" w-full lg:max-w-[1220px] mx-auto rounded-2xl shadow-2xl flex bg-[url('./Images/page9/bg.webp')] bg-cover bg-no-repeat bg-center">
+    <div class="flex justify-evenly items-center flex-col gap-y-16 md:p-24 mx-auto">
+      <h1 class="text-[#032D60] text-[40px] font-semibold leading-[40px] text-center mx-auto max-w-[620px]">Questions? We’ll put you on the right path.</h1>
+      <p class=" max-w-[620px]">Ask about Salesforce products, pricing, implementation, or anything else. Our highly trained reps are standing by, ready to help.</p>
+    <div class="boxes flex gap-x-16 justify-evenly items-center">
+      <div class="px-6 pt-4 pb-2 mt-2 mb-6">
+        <button class="bg-blue-600 text-white px-6 py-3 font-bold hover:bg-blue-950 ">
+          Contact Us
+         </button>
+      </div>
+    
+        <div class="px-6 pt-4 pb-2 mt-2 mb-6">
+          <a class="text-[18px]  underline font-semibold text-gray-700 mr-2 mb-2 hover:text-blue-800 cursor-pointer hover:no-underline">Editions & Pricing</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- !Page11 -->
+<section class="mt-[100px] ">
+  <div class="  flex flex-col md:flex-row justify-evenly items-center gap-y-8">
+    <div class="flex flex-col justify-evenly gap-y-7 items-center">
+      <img src="./Images/salesforce-with-type-logo.svg" width="100px" alt="">
+      <div >
+        <i class="ri-facebook-box-fill text-4xl"></i>
+        <i class="ri-twitter-x-fill text-4xl"></i>
+        <i class="ri-linkedin-box-fill text-4xl"></i>
+        <i class="ri-instagram-line text-4xl"></i>
+        <i class="ri-youtube-fill text-4xl"></i>
+      </div>
+      <p class="font-semibold">Call us at 1800-420-7332</p>
+    </div>
+    <div class="flex flex-col gap-y-8 justify-evenly items-center ">
+      <h3 class="font-bold">New to Salesforce?</h3>
+      <ul class=" text-[#715CAE]">
+        <li>Why Salesforce</li>
+        <li>What is CRM?</li>
+        <li>Explore All Products/li>
+        <li>SaaS</li>
+        <li>Customer Success</li>
+        <li>Product Pricing</li>
+        <li class="hidden md:block"><br></li>
+        <li class="hidden md:block"><br></li>
+        <li class="hidden md:block"><br></li>
+        <li class="hidden md:block"><br></li>
+      </ul>
+    </div>
+    <div class="flex flex-col gap-y-8 justify-evenly items-center">
+      <h3 class="font-bold">About Salesforce</h3> 
+      <ul class=" text-[#715CAE]">
+     <li>Our Story</li>
+     <li>Careers</li>
+     <li>Press</li>
+     <li>Blog</li>
+     <li>Security and Performance</li>
+     <li>Salesforce.org</li>
+     <li>Best CRM Software</li>
+     <li>Sustainability</li>
+     <li>Legal</li>
+     <li>Give us your Feedback</li>
+    </ul>
+    </div>
+    <div class="flex flex-col gap-y-8 justify-evenly items-center">
+      <h3 class="font-bold">Popular Links</h3> 
+      <ul class=" text-[#715CAE] items-center">
+      <li>New Release Features</li>
+      <li>Salesforce Mobile App</li>
+      <li>Business App Store</li>
+      <li>Dreamforce</li>
+      <li>Dreamforce</li>
+      <li>Salesforce.org</li>
+      <li>CRM Software</li>
+      <li>Salesforce Plus</li>
+      <li>Legal</li>
+      <li>Salesforce for startups</li>
+     </ul>
+    </div>
+  </div>
+</section>
+<!-- !Footer -->
+<footer class=" mt-[80px] bg-[#032E61] p-4">
+<div class="max-w-[1180px] mx-auto flex gap-x-8  flex-col md:flex-row">
+  
+<div class="flex justify-center md:justify-evenly items-center">
+  <div class="icon rounded-full p-1 hover:bg-lightblue">
+    <i class="ri-global-line  text-white text-xl"></i>
+  </div>
+  <div class="text-white cursor-pointer more flex items-center gap-1">
+    <p>Worldwide</p>
+    <i class="ri-arrow-down-wide-line text-white text-xl"></i>
+  </div>
+</div>
+
+<div class="flex flex-col text-white gap-y-4 justify-center items-center">
+  <div class="flex gap-x-4 flex-col md:flex-row">
+    <a href="" class="underline hover:text-blue-700 text-sm ">Legal</a>
+    <a href="" class="underline hover:text-blue-700 text-sm ">Terms and Condition</a>
+    <a href="" class="underline hover:text-blue-700 text-sm ">Privacy</a>
+    <a href="" class="underline hover:text-blue-700 text-sm ">Responsible Disclosure</a>
+    <a href="" class="underline hover:text-blue-700 text-sm ">Trust</a>
+    <a href="" class="underline hover:text-blue-700 text-sm ">Contact</a>
+    <a href="" class="underline hover:text-blue-700 text-sm ">Cookie Preferences</a>
+    <a href="" class="underline hover:text-blue-700 text-sm ">Your Privacy Choices</a>
+  </div>
+  <div>
+    <p class="text-sm text-center ">© Copyright 2024 Salesforce, Inc. <a href="" class="underline hover:text-blue-700 text-sm ">All rights reserved.</a> Various trademarks held by their respective owners.</p>
+  </div>
+</div>
+</div>
+</footer>
+    </div>
+
+    <script>
+    const navDialough = document.querySelector('#nav-dialough')
+
+
+function handleMenu() {
+    navDialough.classList.toggle('hidden')
+}
+    </script>
+  </body>
+</html>
